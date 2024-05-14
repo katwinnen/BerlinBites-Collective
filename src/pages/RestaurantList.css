@@ -1,0 +1,47 @@
+.restaurant-list {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .restaurant-item {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .restaurant-item h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+  }
+  
+  .restaurant-item p {
+    margin: 5px 0;
+  }
+  
+  .restaurant-item a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .restaurant-item a:hover {
+    text-decoration: underline;
+  }
+  
+  /* RestaurantList.css */
+.add-recommendation-button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  .add-recommendation-button:hover {
+    background-color: #0056b3;
+  }
+  

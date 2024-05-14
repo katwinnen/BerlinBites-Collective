@@ -20,8 +20,8 @@ body {
 }
 
 .header {
-  background-color: #0d3f67; /* Dark blue header background */
-  color: #fff; /* White text color */
+  background-color: #f5ff00; 
+  color: black; /* White text color */
   padding: 20px 0;
   text-align: center;
 }

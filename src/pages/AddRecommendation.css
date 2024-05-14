@@ -1,0 +1,41 @@
+.add-recommendation {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  input[type="text"],
+  textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .add-recommendation {
+    /* Your existing styles */
+  }
+  
+  .add-recommendation button[type="submit"] {
+    /* Button styles */
+    background-color: #007bff; /* Blue color */
+    color: white; /* White text color */
+    border: none; /* No border */
+    padding: 10px 20px; /* Padding */
+    cursor: pointer; /* Cursor style */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 16px; /* Font size */
+  }
+  
+  .add-recommendation button[type="submit"]:hover {
+    /* Button hover styles */
+    background-color: #0056b3; /* Darker blue color */
+  }
