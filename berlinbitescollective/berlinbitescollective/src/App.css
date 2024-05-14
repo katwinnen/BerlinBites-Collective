@@ -1,0 +1,62 @@
+/* App.css */
+
+/* Reset default margin and padding */
+body, h1, h2, h3, h4, p, ul, li {
+  margin: 1%;
+  padding: 0;
+  margin-left: 5%;
+}
+
+body {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  background-color: #f7f7f7; /* Light gray background */
+  color: #333; /* Dark gray text color */
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.header {
+  background-color: #0d3f67; /* Dark blue header background */
+  color: #fff; /* White text color */
+  padding: 20px 0;
+  text-align: center;
+}
+
+.header h1 {
+  font-size: 36px; /* Large font size for main heading */
+}
+
+.main-content {
+  margin-top: 20px;
+}
+
+.card {
+  background-color: #fff; /* White background for cards */
+  border-radius: 8px; /* Rounded corners for cards */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Box shadow for cards */
+  padding: 20px;
+  margin-bottom: 20px; /* Add margin between cards */
+}
+
+.btn {
+  background-color: #0d3f67; /* Dark blue button background */
+  color: #fff; /* White text color for buttons */
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #0a2c49; /* Darker blue on hover */
+}
+
+/* Add margin and line-height for paragraphs */
+p {
+  margin-bottom: 10px; /* Add margin between paragraphs */
+  line-height: 1.6; /* Increase line height for better readability */
+}
