@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './RestaurantList.css';
+import EditForm from './EditForm'; // Import the EditForm component
 
 function RestaurantList() {
   const [restaurants, setRestaurants] = useState([]);
@@ -95,11 +96,11 @@ function RestaurantList() {
             <p><strong>Address:</strong> {restaurant.address}</p>
             <p><strong>Opening Hours:</strong> {restaurant.openingHours}</p>
             <p><strong>Website:</strong> <a href={restaurant.website}>{restaurant.website}</a></p>
+            <Link to={`/restaurant/${restaurant.id}`}>View Details</Link>
             {/* Buttons for deleting and editing the restaurant */}
             <button onClick={() => handleDelete(restaurant.id)}>Delete</button>
-            <button>
-  <Link to={{ pathname: '/edit', state: { restaurant } }}>Edit</Link>
-</button>          </li>
+            <Link to={`/editform/${restaurant.id}`}>Edit</Link> {/* Link to EditForm */}
+          </li>
         ))}
       </ul>
       <Link to="/addrecommendation" className="add-recommendation-button">Add Recommendation</Link>

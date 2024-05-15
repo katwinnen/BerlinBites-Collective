@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom'; // Import Link from react-router-dom
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import './AddRecommendation.css';
 
 function AddRecommendation() {
@@ -31,7 +32,10 @@ function AddRecommendation() {
     })
     .then(response => {
       if (response.ok) {
+        toast.success("Your recommendation has been successfully added to the list of BerlinBites Collective. Thank you for your contribution.", { autoClose: 2000 }); // Display success toast message
         console.log('Recommendation added successfully');
+        // Navigate to the /restaurantlist route after successful submission
+        window.location.href = '/restaurantlist';
       } else {
         console.error('Failed to add recommendation');
       }
@@ -44,6 +48,8 @@ function AddRecommendation() {
   return (
     <div className="add-recommendation">
       <h2>Add Recommendation</h2>
+      {/* ToastContainer to display toast messages */}
+      <ToastContainer />
       <form onSubmit={handleSubmit}>
         <div className="form-group">
           <label>Restaurant</label>
@@ -99,10 +105,7 @@ function AddRecommendation() {
           />
         </div>
         <div className="form-group">
-          {/* Add Link component to the button */}
-          <Link to="/restaurantlist">
-            <button type="submit">Submit</button>
-          </Link>
+          <button type="submit">Submit</button>
         </div>
       </form>
     </div>
