@@ -26,6 +26,7 @@ function App() {
           <Route path="/editform" component={EditForm} />       
           <Route path="*" element={<NotFound />} />
         </Routes>
+        <RestaurantList />
         <Footer />
       </div>
     </Router>
