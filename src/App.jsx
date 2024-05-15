@@ -8,7 +8,9 @@ import './App.css';
 import RestaurantList from './pages/RestaurantList';
 import AddRecommendation from './pages/AddRecommendation';
 import EditForm from './pages/EditForm';
-import RecommendationDetail from './pages/RecommendationDetail'; // Import the RecommendationDetail component
+import RecommendationDetail from './pages/RecommendationDetail'; 
+import Navbar from './components/Navbar';
+
 
 function App() {
   return (
@@ -16,6 +18,7 @@ function App() {
       <div className="App">
         <header className="header">
           <h1>BerlinBites Collective</h1>
+          <Navbar />
         </header>
         <Routes>
           <Route path="/" element={<Home />} />
