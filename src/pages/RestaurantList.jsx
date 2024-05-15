@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import EditForm from './EditForm'; // Make sure to import EditForm
 import './RestaurantList.css';
 
 function RestaurantList() {
