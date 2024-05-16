@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './RestaurantList.css';
-import EditForm from './EditForm'; // Import the EditForm component
+import EditForm from './EditForm'; 
 
 function RestaurantList() {
   const [restaurants, setRestaurants] = useState([]);

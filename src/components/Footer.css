@@ -7,13 +7,15 @@
 
 .container {
   max-width: 1200px;
-  margin: 0 auto;
+  margin: auto;
   padding: 0 20px;
 }
 
 .footer-content {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 10px;
+  margin-bottom: 5px;
   flex-wrap: wrap;
 }
 

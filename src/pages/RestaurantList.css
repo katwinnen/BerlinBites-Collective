@@ -1,5 +1,4 @@
 .restaurant-list {
-    max-width: 600px;
     margin: 0 auto;
   }
   
@@ -29,12 +28,12 @@
     text-decoration: underline;
   }
   
-  /* RestaurantList.css */
 .add-recommendation-button {
     background-color: #007bff;
     color: #fff;
     border: none;
     padding: 10px 20px;
+    margin-bottom:0;
     font-size: 16px;
     border-radius: 5px;
     text-decoration: none;
