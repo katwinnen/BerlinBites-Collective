@@ -73,3 +73,8 @@
 .add-recommendation-button:hover {
   background-color: #0056b3;
 }
+
+.link {
+  color: #007bff; /* Link color */
+  text-decoration: none; /* Remove underline */
+}

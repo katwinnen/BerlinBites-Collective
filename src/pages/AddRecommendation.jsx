@@ -10,7 +10,10 @@ function AddRecommendation() {
     description: '',
     address: '',
     openingHours: '',
-    website: ''
+    website: '',
+    image: '',
+    priceRange: '€',
+    outdoorOptions: 'Yes'
   });
 
   const handleChange = (e) => {
@@ -32,9 +35,8 @@ function AddRecommendation() {
     })
     .then(response => {
       if (response.ok) {
-        toast.success("Your recommendation has been successfully added to the list of BerlinBites Collective. Thank you for your contribution.", { autoClose: 2000 }); // Display success toast message
+        toast.success("Your recommendation has been successfully added to the list of BerlinBites Collective. Thank you for your contribution.", { autoClose: 2000 });
         console.log('Recommendation added successfully');
-        // Navigate to the /restaurantlist route after successful submission
         window.location.href = '/restaurantlist';
       } else {
         console.error('Failed to add recommendation');
@@ -48,15 +50,23 @@ function AddRecommendation() {
   return (
     <div className="add-recommendation">
       <h2>Add Recommendation</h2>
-      {/* ToastContainer to display toast messages */}
       <ToastContainer />
       <form onSubmit={handleSubmit}>
         <div className="form-group">
-          <label>Restaurant</label>
+          <label>Restaurant name:</label>
           <input
             type="text"
             name="name"
             value={formData.name}
+            onChange={handleChange}
+          />
+        </div>
+        <div className="form-group">
+          <label>Image URL:</label>
+          <input
+            type="text"
+            name="image"
+            value={formData.image}
             onChange={handleChange}
           />
         </div>
@@ -94,6 +104,21 @@ function AddRecommendation() {
             value={formData.openingHours}
             onChange={handleChange}
           />
+        </div>
+        <div className="form-group">
+          <label>Price Range:</label>
+          <select name="priceRange" value={formData.priceRange} onChange={handleChange}>
+            <option value="€">€</option>
+            <option value="€€">€€</option>
+            <option value="€€€">€€€</option>
+          </select>
+        </div>
+        <div className="form-group">
+          <label>Outdoor Options:</label>
+          <select name="outdoorOptions" value={formData.outdoorOptions} onChange={handleChange}>
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+          </select>
         </div>
         <div className="form-group">
           <label>Website:</label>

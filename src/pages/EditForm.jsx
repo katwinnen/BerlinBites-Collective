@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
+import './RestaurantList.css';
 
 function EditForm() {
   const { id } = useParams();
@@ -9,7 +10,10 @@ function EditForm() {
     description: '',
     address: '',
     openingHours: '',
-    website: ''
+    website: '',
+    image: '',
+    priceRange: '€',
+    outdoorOptions: 'Yes'
   });
 
   useEffect(() => {
@@ -65,6 +69,16 @@ function EditForm() {
           />
         </div>
         <div className="form-group">
+          <label htmlFor="image">Image URL:</label>
+          <input
+            type="text"
+            id="image"
+            name="image"
+            value={formData.image}
+            onChange={handleChange}
+          />
+        </div>
+        <div className="form-group">
           <label htmlFor="cuisine">Cuisine:</label>
           <input
             type="text"
@@ -82,6 +96,21 @@ function EditForm() {
             value={formData.description}
             onChange={handleChange}
           />
+        </div>
+        <div className="form-group">
+          <label htmlFor="priceRange">Price Range:</label>
+          <select id="priceRange" name="priceRange" value={formData.priceRange} onChange={handleChange}>
+            <option value="€">€</option>
+            <option value="€€">€€</option>
+            <option value="€€€">€€€</option>
+          </select>
+        </div>
+        <div className="form-group">
+          <label htmlFor="outdoorOptions">Outdoor Options:</label>
+          <select id="outdoorOptions" name="outdoorOptions" value={formData.outdoorOptions} onChange={handleChange}>
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+          </select>
         </div>
         <div className="form-group">
           <label htmlFor="address">Address:</label>
@@ -113,8 +142,8 @@ function EditForm() {
             onChange={handleChange}
           />
         </div>
-        <button type="submit">Update</button>
-        <Link to="/restaurantlist">Cancel</Link>
+        <button className="btn" type="submit">Update</button>
+        <Link className="link" to="/restaurantlist">Cancel</Link>
       </form>
     </div>
   );
