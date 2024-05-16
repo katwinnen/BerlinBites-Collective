@@ -11,10 +11,10 @@ const About = () => {
       <p>Our platform features a curated list of basic recommendations to get you started on your culinary journey through Berlin. However, the heart of BerlinBites Collective lies in the contributions of our users. Simply sign up, browse through existing recommendations, and add your own favorites to share with others.</p>
       <h3>What We Offer</h3>      
       <ul>
-        <li>Comprehensive Criteria: When submitting a recommendation, users provide detailed criteria including cuisine, price range, quality, atmosphere, and more, to help others make informed decisions.</li>
-        <li>Diverse Options: Whether you're craving Italian, Vietnamese, or anything in between, our platform showcases a wide range of cuisines to satisfy every palate.</li>
-        <li>Vegetarian, Vegan, Gluten-Free Options: We understand the importance of dietary preferences and offer filters to easily find restaurants that cater to specific dietary needs.</li>
-        <li>Community-driven: BerlinBites Collective thrives on community participation. Join us in building a comprehensive database of the best dining spots in Berlin.</li>
+        <li><strong>Comprehensive Criteria:</strong> When submitting a recommendation, users provide detailed criteria including cuisine, price range, quality, atmosphere, and more, to help others make informed decisions.</li>
+        <li><strong>Diverse Options:</strong> Whether you're craving Italian, Vietnamese, or anything in between, our platform showcases a wide range of cuisines to satisfy every palate.</li>
+        <li><strong>Vegetarian, Vegan, Gluten-Free Options:</strong> We understand the importance of dietary preferences and offer filters to easily find restaurants that cater to specific dietary needs.</li>
+        <li><strong>Community-driven:</strong> BerlinBites Collective thrives on community participation. Join us in building a comprehensive database of the best dining spots in Berlin.</li>
       </ul>
     </div>
   );

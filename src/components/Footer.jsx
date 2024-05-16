@@ -1,6 +1,6 @@
-// Footer.jsx
 import React from 'react';
 import './Footer.css';
+import { Link } from 'react-router-dom'; // Import Link from react-router-dom
 
 function Footer() {
   return (
@@ -9,10 +9,9 @@ function Footer() {
         <div className="footer-content">
           <div className="footer-section">
             <ul>
-              <li><a href="#">Imprint</a></li>
-              <li><a href="#">Terms & Conditions</a></li>
-              <li><a href="#">Privacy Notice</a></li>
-              <li><a href="#">Contact</a></li>
+              <li><Link to="/imprint">Imprint</Link></li>
+              <li><Link to="/privacy">Privacy Notice</Link></li>
+              <li><Link to="/contact">Contact</Link></li>
             </ul>
           </div>
         </div>

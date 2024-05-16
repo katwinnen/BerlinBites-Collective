@@ -4,7 +4,7 @@
 }
 
 .restaurant-list ul {
-  list-style: none; /* Remove the default bullet points */
+  list-style: none; 
 }
 
 .restaurant-item {
@@ -75,6 +75,13 @@
 }
 
 .link {
-  color: #007bff; /* Link color */
-  text-decoration: none; /* Remove underline */
+  color: #007bff; 
+  text-decoration: none; 
 }
+
+@media only screen and (min-width: 1024px) and (max-width: 1440px) {
+  .restaurant-list {
+    width: 80%; 
+  }
+}
+

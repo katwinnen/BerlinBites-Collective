@@ -11,6 +11,9 @@ import EditForm from './pages/EditForm';
 import RecommendationDetail from './pages/RecommendationDetail';
 import Navbar from './components/Navbar';
 import logo from './assets/logo.png';
+import Imprint from './pages/Imprint';
+import PrivacyNotice from './pages/PrivacyNotice';
+import Contact from './pages/Contact';
 
 function App() {
   return (
@@ -27,6 +30,9 @@ function App() {
           <Route path="/addrecommendation" element={<AddRecommendation />} />
           <Route path="/editform/:id" element={<EditForm />} />
           <Route path="/restaurant/:id" element={<RecommendationDetail />} />
+          <Route path="/imprint" element={<Imprint />} />
+          <Route path="/privacy" element={<PrivacyNotice />} />
+          <Route path="/contact" element={<Contact />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
         <Footer />
