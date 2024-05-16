@@ -8,16 +8,16 @@ import './App.css';
 import RestaurantList from './pages/RestaurantList';
 import AddRecommendation from './pages/AddRecommendation';
 import EditForm from './pages/EditForm';
-import RecommendationDetail from './pages/RecommendationDetail'; 
+import RecommendationDetail from './pages/RecommendationDetail';
 import Navbar from './components/Navbar';
-
+import logo from './assets/logo.png';
 
 function App() {
   return (
     <Router>
       <div className="App">
         <header className="header">
-          <h1>BerlinBites Collective</h1>
+          <img src={logo} alt="BerlinBites Collective" className="logo" />
           <Navbar />
         </header>
         <Routes>

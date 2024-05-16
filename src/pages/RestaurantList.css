@@ -1,46 +1,75 @@
 .restaurant-list {
-    margin: 0 auto;
-  }
-  
-  .restaurant-item {
-    background-color: #f9f9f9;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    padding: 20px;
-    margin-bottom: 20px;
-  }
-  
-  .restaurant-item h3 {
-    margin-top: 0;
-    margin-bottom: 10px;
-  }
-  
-  .restaurant-item p {
-    margin: 5px 0;
-  }
-  
-  .restaurant-item a {
-    color: #007bff;
-    text-decoration: none;
-  }
-  
-  .restaurant-item a:hover {
-    text-decoration: underline;
-  }
-  
+  margin: 0 auto;
+  width: 50%;
+}
+
+.restaurant-list ul {
+  list-style: none; /* Remove the default bullet points */
+}
+
+.restaurant-item {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.restaurant-item h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.restaurant-item p {
+  margin: 5px 0;
+}
+
+.restaurant-item a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.restaurant-item a:hover {
+  text-decoration: underline;
+}
+
+.restaurant-item button,
+.restaurant-item .edit-link {
+  background-color: var(--primary-color);
+  color: #fff;
+  border: none;
+  padding: 8px 12px; 
+  margin-right: 8px;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.restaurant-item button:hover,
+.restaurant-item .edit-link:hover {
+  background-color: #0056b3;
+}
+
+.restaurant-item button.delete-btn {
+  background-color: #dc3545;
+}
+
+.restaurant-item button.delete-btn:hover {
+  background-color: #bd2130;
+}
+
 .add-recommendation-button {
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    margin-bottom:0;
-    font-size: 16px;
-    border-radius: 5px;
-    text-decoration: none;
-    cursor: pointer;
-  }
-  
-  .add-recommendation-button:hover {
-    background-color: #0056b3;
-  }
-  
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  margin-bottom: 0;
+  font-size: 16px;
+  border-radius: 5px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.add-recommendation-button:hover {
+  background-color: #0056b3;
+}

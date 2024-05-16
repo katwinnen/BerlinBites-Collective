@@ -1,13 +1,13 @@
 /* App.css */
 :root {
-  --primary-color: #0d3f67; /* Define primary color */
-  --secondary-color: #f5ff00; /* Define secondary color */
+  --primary-color: #0d3f67;
+  --secondary-color: #f5ff00;
 }
 
 body {
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  background-color: #f7f7f7; /* Light gray background */
-  color: #333; /* Dark gray text color */
+  background-color: #f7f7f7;
+  color: #333;
 }
 
 .app {
@@ -19,7 +19,7 @@ body {
 .content {
   flex: 1;
   width: 100%;
-  margin: 0 auto; 
+  margin: 0 auto;
 }
 
 .container {
@@ -30,39 +30,48 @@ body {
 
 .header {
   background-color: var(--secondary-color);
-  color: black; /* White text color */
-  padding: 20px 0;
-  text-align: center;
+  color: black;
+  display: flex;
+  align-items: center; /* Center align items vertically */
+}
+
+.header img.logo {
+  max-width: 300px; /* Adjust max-width for the logo */
 }
 
 .header h1 {
-  font-size: 2.5rem; /* Large font size for main heading */
+  font-size: 2rem;
+}
+
+.navbar {
+  flex: 1; /* Take up remaining space */
+  display: flex;
+  justify-content: center; /* Center align navbar items */
 }
 
 .card {
-  background-color: #fff; /* White background for cards */
-  border-radius: 1rem; /* Rounded corners for cards */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Box shadow for cards */
+  background-color: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   padding: 20px;
-  margin-bottom: 20px; /* Add margin between cards */
+  margin-bottom: 20px;
 }
 
 .btn {
-  background-color: var(--primary-color); /* Primary color button background */
-  color: #fff; /* White text color for buttons */
+  background-color: var(--primary-color);
+  color: #fff;
   padding: 0.8rem 1.6rem;
   border: none;
   border-radius: 0.4rem;
   cursor: pointer;
-  transition: background-color 0.3s ease; /* Smooth transition on hover */
+  transition: background-color 0.3s ease;
 }
 
 .btn:hover {
-  background-color: #0a2c49; /* Darker blue on hover */
+  background-color: #0a2c49;
 }
 
-/* Add margin and line-height for paragraphs */
 p {
-  margin-bottom: 1rem; /* Add margin between paragraphs */
-  line-height: 1.6; /* Increase line height for better readability */
+  margin-bottom: 1rem;
+  line-height: 1.6;
 }

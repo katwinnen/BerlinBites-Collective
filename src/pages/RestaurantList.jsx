@@ -85,23 +85,25 @@ function RestaurantList() {
   return (
     <div className="restaurant-list">
       <h2>Recommended restaurants</h2>
+      <Link to="/addrecommendation" className="btn">Add Recommendation</Link>
       <ul>
         {restaurants.map(restaurant => (
           <li key={restaurant.id} className="restaurant-item">
+            <img src={restaurant.image} alt={restaurant.name} />
             <h3>{restaurant.name}</h3>
             <p><strong>Cuisine:</strong> {restaurant.cuisine}</p>
             <p><strong>Description:</strong> {restaurant.description}</p>
+            <p><strong>Price Range:</strong> {restaurant.priceRange}</p>
+            <p><strong>Outdoor Options:</strong> {restaurant.outdoorOptions}</p>
             <p><strong>Address:</strong> {restaurant.address}</p>
             <p><strong>Opening Hours:</strong> {restaurant.openingHours}</p>
-            <p><strong>Website:</strong> <a href={restaurant.website}>{restaurant.website}</a></p>
-            <Link to={`/restaurant/${restaurant.id}`}>View Details</Link>
-            {/* Buttons for deleting and editing the restaurant */}
+            <p><strong>Website:</strong> <a href={restaurant.website} target="_blank" rel="noopener noreferrer">{restaurant.website}</a></p>
+            <p><Link to={`/restaurant/${restaurant.id}`} className="view-details-button">View Details</Link></p>
             <button onClick={() => handleDelete(restaurant.id)}>Delete</button>
-            <Link to={`/editform/${restaurant.id}`}>Edit</Link> {/* Link to EditForm */}
+            <Link to={`/editform/${restaurant.id}`} className="edit-link">Edit</Link>
           </li>
         ))}
       </ul>
-      <Link to="/addrecommendation" className="add-recommendation-button">Add Recommendation</Link>
       {editRestaurant && (
         <div className="edit-form">
           <h2>Edit Restaurant</h2>
