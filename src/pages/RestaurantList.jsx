@@ -60,7 +60,6 @@ function RestaurantList() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Send PUT request to update the restaurant details
     fetch(`https://berlinbites-collective.adaptable.app/restaurants/${editRestaurant.id}`, {
       method: 'PUT',
       headers: {
@@ -70,11 +69,10 @@ function RestaurantList() {
     })
     .then(response => {
       if (response.ok) {
-        // Update restaurant details in the UI
         setRestaurants(restaurants.map(restaurant =>
           restaurant.id === editRestaurant.id ? formData : restaurant
         ));
-        setEditRestaurant(null); // Close the edit form
+        setEditRestaurant(null); 
       } else {
         console.error('Failed to update restaurant');
       }
@@ -86,7 +84,7 @@ function RestaurantList() {
 
   return (
     <div className="restaurant-list">
-      <h2>Restaurant List</h2>
+      <h2>Recommended restaurants</h2>
       <ul>
         {restaurants.map(restaurant => (
           <li key={restaurant.id} className="restaurant-item">
