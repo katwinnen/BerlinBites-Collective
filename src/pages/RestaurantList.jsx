@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './RestaurantList.css';
-import EditForm from './EditForm'; 
+import EditForm from './EditForm';
 
 function RestaurantList() {
   const [restaurants, setRestaurants] = useState([]);
@@ -13,6 +13,11 @@ function RestaurantList() {
     address: '',
     openingHours: '',
     website: ''
+  });
+  const [filters, setFilters] = useState({
+    cuisine: '',
+    priceRange: '',
+    outdoorOptions: ''
   });
 
   useEffect(() => {
@@ -26,16 +31,16 @@ function RestaurantList() {
     fetch(`https://berlinbites-collective.adaptable.app/restaurants/${id}`, {
       method: 'DELETE'
     })
-    .then(response => {
-      if (response.ok) {
-        setRestaurants(restaurants.filter(restaurant => restaurant.id !== id));
-      } else {
-        console.error('Failed to delete restaurant');
-      }
-    })
-    .catch(error => {
-      console.error('Error deleting restaurant:', error);
-    });
+      .then(response => {
+        if (response.ok) {
+          setRestaurants(restaurants.filter(restaurant => restaurant.id !== id));
+        } else {
+          console.error('Failed to delete restaurant');
+        }
+      })
+      .catch(error => {
+        console.error('Error deleting restaurant:', error);
+      });
   };
 
   const handleEdit = (restaurant) => {
@@ -67,27 +72,38 @@ function RestaurantList() {
       },
       body: JSON.stringify(formData)
     })
-    .then(response => {
-      if (response.ok) {
-        setRestaurants(restaurants.map(restaurant =>
-          restaurant.id === editRestaurant.id ? formData : restaurant
-        ));
-        setEditRestaurant(null); 
-      } else {
-        console.error('Failed to update restaurant');
-      }
-    })
-    .catch(error => {
-      console.error('Error updating restaurant:', error);
-    });
+      .then(response => {
+        if (response.ok) {
+          setRestaurants(restaurants.map(restaurant =>
+            restaurant.id === editRestaurant.id ? formData : restaurant
+          ));
+          setEditRestaurant(null);
+        } else {
+          console.error('Failed to update restaurant');
+        }
+      })
+      .catch(error => {
+        console.error('Error updating restaurant:', error);
+      });
   };
+
+  const filteredRestaurants = restaurants.filter(restaurant => {
+    return (
+      (!filters.cuisine || restaurant.cuisine.toLowerCase().includes(filters.cuisine.toLowerCase())) &&
+      (!filters.priceRange || restaurant.priceRange === filters.priceRange) && // Adjusted this line
+      (!filters.outdoorOptions || restaurant.outdoorOptions.toLowerCase().includes(filters.outdoorOptions.toLowerCase()))
+    );
+  });
+  
+  console.log('Filtered Restaurants:', filteredRestaurants);
+
 
   return (
     <div className="restaurant-list">
       <h2>Recommended restaurants</h2>
       <Link to="/addrecommendation" className="btn">Add Recommendation</Link>
       <ul>
-        {restaurants.map(restaurant => (
+        {filteredRestaurants.map(restaurant => (
           <li key={restaurant.id} className="restaurant-item">
             <img src={restaurant.image} alt={restaurant.name} />
             <h3>{restaurant.name}</h3>
