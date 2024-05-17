@@ -99,7 +99,7 @@ function RestaurantList() {
 
   return (
     <div className="restaurant-list">
-      <h2>Recommended restaurants</h2>
+      <h2>Recommendations</h2>
       <Link to="/addrecommendation" className="btn">Add Recommendation</Link>
       <p></p>
       <ul>
@@ -181,6 +181,8 @@ function RestaurantList() {
           </form>
         </div>
       )}
+          <Link to="/addrecommendation" className="btn">Add Recommendation</Link>
+          <p></p>
     </div>
   );
 }

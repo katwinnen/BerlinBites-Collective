@@ -34,7 +34,7 @@
   
   .edit-form button[type="submit"] {
     width: 100%;
-    background-color: #007bff;
+    background-color: rgb(228, 22, 149);
     color: white;
     border: none;
     padding: 10px;
@@ -45,7 +45,7 @@
   }
   
   .edit-form button[type="submit"]:hover {
-    background-color: #0056b3;
+    background-color: #0a2c49;
   }
   
   .link {

@@ -124,7 +124,7 @@ body {
 }
 
 .btn {
-  background-color: var(--primary-color);
+  background-color: rgb(228, 22, 149);
   color: #fff;
   padding: 0.8rem 1.6rem;
   border: none;
@@ -136,6 +136,11 @@ body {
 
 .btn:hover {
   background-color: #0a2c49;
+}
+
+h1 {
+  background-color: yellow;
+  margin-left: 5%;
 }
 
 h2,

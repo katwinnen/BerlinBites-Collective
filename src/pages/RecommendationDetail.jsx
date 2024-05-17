@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
+import './RecommendationDetail.css';  
 
 function RecommendationDetail() {
   const { id } = useParams(); 
@@ -17,13 +18,16 @@ function RecommendationDetail() {
   }
 
   return (
-    <div>
-      <h2>{restaurant.name}</h2>
+    <div className="restaurant-item">
+      <img src={restaurant.image} alt={restaurant.name} />
+      <h3>{restaurant.name}</h3>
       <p><strong>Cuisine:</strong> {restaurant.cuisine}</p>
       <p><strong>Description:</strong> {restaurant.description}</p>
+      <p><strong>Price Range:</strong> {restaurant.priceRange}</p>
+      <p><strong>Outdoor Options:</strong> {restaurant.outdoorOptions}</p>
       <p><strong>Address:</strong> {restaurant.address}</p>
       <p><strong>Opening Hours:</strong> {restaurant.openingHours}</p>
-      <p><strong>Website:</strong> <a href={restaurant.website}>{restaurant.website}</a></p>
+      <p><strong>Website:</strong> <a href={restaurant.website} target="_blank" rel="noopener noreferrer">{restaurant.website}</a></p>
     </div>
   );
 }
