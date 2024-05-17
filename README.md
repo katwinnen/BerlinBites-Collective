@@ -6,7 +6,7 @@ Welcome to **BerlinBites Collective**! This platform is your go-to destination f
 
 **Our Mission**: We believe that the best restaurant recommendations come from the community. That's why we've created a platform where everyone can contribute their favorite dining spots, ensuring a diverse and comprehensive selection of culinary experiences.
 
-**How It Works**: Our platform features a curated list of basic recommendations to get you started on your culinary journey through Berlin. The heart of BerlinBites Collective lies in the contributions of our users. Simply sign up, browse through existing recommendations, and add your own favorites to share with others.
+**How It Works**: Our platform features a curated list of basic recommendations to get you started on your culinary journey through Berlin. However, the heart of BerlinBites Collective lies in the contributions of our users. Simply browse through existing recommendations, and delete outdated recommendations, edit existing ones or add, your own favorites to share with others.
 
 **What We Offer**:
 - **Comprehensive Criteria**: Detailed criteria including cuisine, price range, quality, atmosphere, and more to help make informed decisions.
