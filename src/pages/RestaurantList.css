@@ -1,27 +1,36 @@
 .restaurant-list {
   margin: 0 auto;
-  width: 50%;
+  width: 70%; 
 }
 
 .restaurant-list ul {
   list-style: none; 
+  padding: 0; 
 }
 
 .restaurant-item {
   background-color: #f9f9f9;
   border: 1px solid #ddd;
   border-radius: 4px;
-  padding: 20px;
-  margin-bottom: 20px;
+  padding: 10px; 
+  margin-bottom: 10px; 
 }
 
 .restaurant-item h3 {
   margin-top: 0;
-  margin-bottom: 10px;
+  margin-bottom: 5px; 
+  font-size: 16px; 
 }
 
 .restaurant-item p {
-  margin: 5px 0;
+  margin: 3px 0; 
+  font-size: 14px; 
+}
+
+.restaurant-item img {
+  max-width: 100%; 
+  height: auto; 
+  margin-bottom: 5px; 
 }
 
 .restaurant-item a {
@@ -38,10 +47,10 @@
   background-color: var(--primary-color);
   color: #fff;
   border: none;
-  padding: 8px 12px; 
-  margin-right: 8px;
-  border-radius: 5px;
-  font-size: 14px;
+  padding: 5px 10px; 
+  margin-right: 5px; 
+  border-radius: 3px; 
+  font-size: 12px; 
   cursor: pointer;
 }
 
@@ -62,9 +71,9 @@
   background-color: #007bff;
   color: #fff;
   border: none;
-  padding: 10px 20px;
-  margin-bottom: 0;
-  font-size: 16px;
+  padding: 8px 16px; 
+  margin-bottom: 10px; 
+  font-size: 14px;
   border-radius: 5px;
   text-decoration: none;
   cursor: pointer;
@@ -79,9 +88,22 @@
   text-decoration: none; 
 }
 
-@media only screen and (min-width: 1024px) and (max-width: 1440px) {
-  .restaurant-list {
-    width: 80%; 
+@media only screen and (min-width: 768px) {
+  .restaurant-item {
+    padding: 15px; 
+    margin-bottom: 15px; 
+  }
+
+  .restaurant-item h3 {
+    font-size: 18px;
+  }
+
+  .restaurant-item p {
+    font-size: 16px;
+  }
+
+  .add-recommendation-button {
+    padding: 10px 20px; 
+    margin-bottom: 0; 
   }
 }
-

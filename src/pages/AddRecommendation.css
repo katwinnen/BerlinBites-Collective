@@ -1,16 +1,22 @@
 .add-recommendation {
-  width: 50%;
-  margin-left: 50%;
-  margin-top: 20px;
-  background-color: #f9f9f9; /* Add background color */
-  border: 1px solid #ddd; /* Add border */
-  border-radius: 4px; /* Add border radius */
-  padding: 20px; /* Add padding */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add box shadow */
+  width: 60%;
+  margin: 0 auto; /* Center the form horizontally */
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-top: 10px;
 }
 
+.add-recommendation-header {
+  width: 100%; /* Ensure the header spans the full width */
+  text-align: center; /* Center the text within the header */
+}
+
+
 .form-group {
-  margin-bottom: 20px;
+  margin-bottom: 15px; /* Reduced margin for better spacing */
 }
 
 label {
@@ -20,17 +26,18 @@ label {
 
 input[type="text"],
 textarea {
-  width: 100%;
+  width: calc(100% - 16px); /* Adjusted width to account for padding and border */
   padding: 8px;
   border: 1px solid #ccc;
   border-radius: 4px;
 }
 
 .add-recommendation button[type="submit"] {
+  width: 100%; /* Adjusted button width for better responsiveness */
   background-color: #007bff;
   color: white;
   border: none;
-  padding: 10px 20px;
+  padding: 10px;
   cursor: pointer;
   border-radius: 5px;
   font-size: 16px;

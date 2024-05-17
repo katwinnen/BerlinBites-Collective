@@ -14,11 +14,11 @@ function RestaurantList() {
     openingHours: '',
     website: ''
   });
-  const [filters, setFilters] = useState({
-    cuisine: '',
-    priceRange: '',
-    outdoorOptions: ''
-  });
+  // const [filters, setFilters] = useState({
+  //   cuisine: '',
+  //   priceRange: '',
+  //   outdoorOptions: ''
+  // });
 
   useEffect(() => {
     fetch('https://berlinbites-collective.adaptable.app/restaurants')
@@ -87,23 +87,23 @@ function RestaurantList() {
       });
   };
 
-  const filteredRestaurants = restaurants.filter(restaurant => {
-    return (
-      (!filters.cuisine || restaurant.cuisine.toLowerCase().includes(filters.cuisine.toLowerCase())) &&
-      (!filters.priceRange || restaurant.priceRange === filters.priceRange) && // Adjusted this line
-      (!filters.outdoorOptions || restaurant.outdoorOptions.toLowerCase().includes(filters.outdoorOptions.toLowerCase()))
-    );
-  });
-  
-  console.log('Filtered Restaurants:', filteredRestaurants);
+  // const filteredRestaurants = restaurants.filter(restaurant => {
+  //   return (
+  //     (!filters.cuisine || restaurant.cuisine.toLowerCase().includes(filters.cuisine.toLowerCase())) &&
+  //     (!filters.priceRange || restaurant.priceRange === filters.priceRange) &&
+  //     (!filters.outdoorOptions || restaurant.outdoorOptions.toLowerCase().includes(filters.outdoorOptions.toLowerCase()))
+  //   );
+  // });
 
+  // console.log('Filtered Restaurants:', filteredRestaurants);
 
   return (
     <div className="restaurant-list">
       <h2>Recommended restaurants</h2>
       <Link to="/addrecommendation" className="btn">Add Recommendation</Link>
+      <p></p>
       <ul>
-        {filteredRestaurants.map(restaurant => (
+        {restaurants.map(restaurant => (
           <li key={restaurant.id} className="restaurant-item">
             <img src={restaurant.image} alt={restaurant.name} />
             <h3>{restaurant.name}</h3>

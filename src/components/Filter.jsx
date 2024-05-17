@@ -24,7 +24,6 @@ function Filter({ onApplyFilter }) {
   return (
     <div className="restaurant-list">
       <h2>Filter Restaurants</h2>
-      {/* Cuisine filter */}
       <div>
         <label>Cuisine:</label>
         <select
@@ -36,10 +35,8 @@ function Filter({ onApplyFilter }) {
           <option value="Italian">Italian</option>
           <option value="Vietnamese">Vietnamese</option>
           <option value="German">German</option>
-          {/* Add more cuisine options as needed */}
         </select>
       </div>
-      {/* Price Range filter */}
       <div>
         <label>Price Range:</label>
         <select
@@ -53,7 +50,6 @@ function Filter({ onApplyFilter }) {
           <option value="$$$">$$$</option>
         </select>
       </div>
-      {/* Outdoor Options filter */}
       <div>
         <label>Outdoor Options:</label>
         <select
@@ -66,7 +62,6 @@ function Filter({ onApplyFilter }) {
           <option value="No">No</option>
         </select>
       </div>
-      {/* Apply Filter button */}
       <button onClick={handleApplyFilter}>Apply Filter</button>
     </div>
   );

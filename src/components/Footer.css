@@ -1,8 +1,8 @@
-/* Footer.css */
 .footer {
   background-color: darkgrey;
   color: white;
   padding: 50px 0;
+  margin-top: 10px;
 }
 
 .container {
@@ -20,7 +20,7 @@
 }
 
 .footer-section {
-  flex: 1 1 auto; /* Allow each section to grow as needed */
+  flex: 1 1 auto; 
   margin-right: 20px;
 }
 
@@ -32,15 +32,15 @@
 .footer-section ul {
   list-style-type: none;
   padding: 0;
-  display: flex; /* Display links as flex items */
+  display: flex; 
 }
 
 .footer-section ul li {
-  margin-right: 20px; /* Add spacing between links */
+  margin-right: 20px; 
 }
 
 .footer-section ul li:last-child {
-  margin-right: 0; /* Remove right margin for the last link */
+  margin-right: 0; 
 }
 
 .footer-section ul li a {

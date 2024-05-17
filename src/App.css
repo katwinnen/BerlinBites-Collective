@@ -25,31 +25,76 @@ body {
 .container {
   max-width: 100%;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 10px; 
 }
 
 .header {
   background-color: var(--secondary-color);
   color: black;
   display: flex;
+  justify-content: space-between; 
   align-items: center; 
+  padding: 10px 20px; 
 }
 
+.burger-menu {
+  display: none; 
+}
+
+.burger-menu-icon {
+  cursor: pointer;
+  font-size: 40px;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%; 
+  right: 0; 
+  background-color: #ffffff; 
+  border: 1px solid #dddddd; 
+  border-radius: 4px;
+  padding: 10px; 
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+  display: none; 
+}
+
+.dropdown-menu ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.dropdown-menu ul li {
+  margin-bottom: 10px;
+}
+
+.dropdown-menu ul li a {
+  color: #333333; 
+  text-decoration: none;
+}
+
+.dropdown-menu ul li a:hover {
+  color: #007bff; 
+}
+
+@media only screen and (max-width: 768px) {
+  .navbar {
+    display: none; 
+  }
+
+  .burger-menu {
+    display: block; 
+  }
+}
+
+
 .header img.logo {
-  max-width: 300px; 
+  max-width: 200px; 
 }
 
 .header h1 {
-  font-size: 2rem;
+  font-size: 1.5rem; 
 }
-
-.navbar {
-  flex: 1; 
-  display: flex;
-  justify-content: center; 
-}
-
-
 
 .card {
   background-color: #fff;
@@ -67,13 +112,16 @@ body {
   border-radius: 0.4rem;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  margin-left: 5%;
 }
 
 .btn:hover {
   background-color: #0a2c49;
 }
 
-h2, h3, h4 {
+h2,
+h3,
+h4 {
   margin-left: 5%;
 }
 
@@ -81,24 +129,30 @@ ul {
   margin-left: 5%;
 }
 
-
 p {
   margin-bottom: 1rem;
-  max-width: 75%;
+  width: 70%; 
   line-height: 1.6;
   margin-left: 5%;
 }
 
 @media only screen and (max-width: 480px) {
   .header h1 {
-    font-size: 1.5rem; 
+    font-size: 1.2rem; 
   }
-  
+
   .header img.logo {
-    max-width: 200px; 
+    max-width: 150px; 
   }
-  
-  .container {
-    padding: 0 10px;
+}
+
+
+@media only screen and (max-width: 768px) {
+  .navbar-links {
+    display: none;
+  }
+
+  .burger-menu {
+    display: block;
   }
 }

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import './RestaurantList.css';
+import './EditForm.css'; 
 
 function EditForm() {
   const { id } = useParams();
