@@ -16,7 +16,7 @@ Welcome to **BerlinBites Collective**! This platform is your go-to destination f
 
 ## 🚀 Demo
 
-Check out the final version of the project [here](https://berlinbitescollective.netlify.app/about).
+Check out the final version of the project [here](https://berlinbitescollective.netlify.app).
 
 ## ⚙️ Installation
 
@@ -53,10 +53,6 @@ To run this application on your computer, follow these steps:
     ```sh
     npm run dev
     ```
-
-## 🌐 Resources
-
-- [Markdown Guide](https://www.markdownguide.org/basic-syntax/)
 
 ## ✨ Contributing
 
