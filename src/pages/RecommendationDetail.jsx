@@ -2,16 +2,15 @@ import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 
 function RecommendationDetail() {
-  const { id } = useParams(); // Get the restaurant ID from the URL params
+  const { id } = useParams(); 
   const [restaurant, setRestaurant] = useState(null);
 
   useEffect(() => {
-    // Fetch restaurant details based on the ID
     fetch(`https://berlinbites-collective.adaptable.app/restaurants/${id}`)
       .then(response => response.json())
       .then(data => setRestaurant(data))
       .catch(error => console.error('Error fetching restaurant details:', error));
-  }, [id]); // Fetch data whenever the ID changes
+  }, [id]); 
 
   if (!restaurant) {
     return <div>Loading...</div>;

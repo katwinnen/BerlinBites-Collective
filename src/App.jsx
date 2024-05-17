@@ -30,24 +30,23 @@ function App() {
             <div className="burger-menu-icon">&#9776;</div>
           </div>
           <nav className="navbar">
-          <ul className="navbar">
-            <li><Link to="/">Home</Link></li>
-            <li><Link to="/addrecommendation">Add Recommendation</Link></li>
-            <li><Link to="/about">About</Link></li>
-          </ul>
-        </nav>
+            <ul>
+              <li><Link to="/">Home</Link></li>
+              <li><Link to="/addrecommendation">Add Recommendation</Link></li>
+              <li><Link to="/about">About</Link></li>
+            </ul>
+          </nav>
         </header>
 
         {showDropdown && (
           <div className="dropdown-menu">
             <ul className="dropdown-links">
-              <li><Link to="/restaurantlist" onClick={toggleDropdown}>Restaurant List</Link></li>
+              <li><Link to="/restaurantlist" onClick={toggleDropdown}>Restaurants</Link></li>
               <li><Link to="/addrecommendation" onClick={toggleDropdown}>Add Recommendation</Link></li>
               <li><Link to="/about" onClick={toggleDropdown}>About</Link></li>
             </ul>
           </div>
         )}
-       
 
         <Routes>
           <Route path="/" element={<Home />} />

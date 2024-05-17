@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import RestaurantList from './RestaurantList';
-import Filter from '../components/Filter'; // Import the Filter component from the correct path
+import Filter from '../components/Filter'; 
 
 function Home() {
   const [filters, setFilters] = useState({
@@ -9,16 +9,14 @@ function Home() {
     outdoorOptions: ''
   });
 
-  // State variable to manage the visibility of the dropdown menu
   const [dropdownVisible, setDropdownVisible] = useState(false);
 
   const handleApplyFilter = (newFilters) => {
     setFilters(newFilters);
   };
 
-  // Function to toggle the visibility of the dropdown menu
   const toggleDropdown = () => {
-    console.log("Dropdown toggled"); // Add this line for debugging
+    console.log("Dropdown toggled"); 
     setDropdownVisible(!dropdownVisible);
   };
   
@@ -44,8 +42,7 @@ function Home() {
           </div>
         )}
       </div>
-     {/* <Filter onApplyFilter={handleApplyFilter} />  */}
-      <RestaurantList filters={filters} /> {/* Pass filters as props */}
+      <RestaurantList filters={filters} /> 
     </div>
   );
 }
